@@ -1,7 +1,5 @@
 # NakamaDockerCompose
-# This is what i have so far with my docker compose file
-
-# It's nakama is given this error
+# This is what i have so far with my docker compose file, and i can't figure out how to fix this error.
 
 nakama        | + /nakama/nakama migrate up --database.address+  root@localhost:26257?sslcert=crdbcerts/client.root.crt 
 
