@@ -2,6 +2,7 @@
 This is what i have so far with my docker compose file
 
 It's nakama is given this error
+
 nakama        | + /nakama/nakama migrate up --database.address+  root@localhost:26257?sslcert=crdbcerts/client.root.crt 
 nakama        | + sslrootcert=crdbcerts/ca.crt 
 nakama        | + /nakama/nakama migrate up --database.address root@roach-0:26257 
