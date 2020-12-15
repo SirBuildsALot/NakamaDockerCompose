@@ -58,15 +58,16 @@ services:
       - "/bin/sh"
       - "-ecx"
       - >
-          /nakama/nakama migrate up --database.address root@roach-0:26257 &&
+          /nakama/nakama migrate up --database.address 'lb:5432?sslmode=require&sslrootcert=/certs/ca.crt&sslcert=/certs/client.root.crt&sslkey=/certs/client.root.key' &&
           exec /nakama/nakama --config /nakama/data/my-special-config.yml
     restart: always
-    links:
-      - "roach-cert:db"
+#    links:
+#      - "roach-cert:db"
     depends_on:
-      - roach-cert
+      - roach-init
     volumes:
       - ./:/nakama/data
+      - certs-client:/certs
     expose:
       - "7349"
       - "7350"

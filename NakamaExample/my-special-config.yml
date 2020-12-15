@@ -13,7 +13,7 @@ metrics:
 
 database:
   address:
-    - "root@cockroachdb:26257"
+    - "lb:5432?sslmode=require&sslrootcert=/certs/ca.crt&sslcert=/certs/client.root.crt&sslkey=/certs/client.root.key"
   conn_max_lifetime_ms: 0
   max_open_conns: 0
   max_idle_conns: 100
